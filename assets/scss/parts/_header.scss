@@ -1,0 +1,41 @@
+/**
+ * Created by Benzo
+ * https://benzo.io
+ * User: oreuveni
+ * Date: 30/12/2017
+ * Time: 9:26
+ **/
+header.header {
+  padding-top: 60px;
+  padding-bottom: 20px;
+
+  @include respond-to('small'){
+    padding-bottom: 60px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  #toggle-sidebar {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+
+    @include respond-to('small') {
+      right: 30px;
+      top: 20px;
+    }
+  }
+
+  .logo-div {
+    img {
+      max-width: 100px;
+    }
+  }
+
+}

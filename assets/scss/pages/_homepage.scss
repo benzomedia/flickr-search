@@ -1,0 +1,98 @@
+/**
+ * Created by Benzo
+ * https://benzo.io
+ * User: oreuveni
+ * Date: 28/12/2017
+ * Time: 20:41
+ **/
+
+div.form-div {
+  @include respond-to('small'){
+    margin-top: -110px;
+    padding-bottom: 60px;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+
+    input {
+      background-color: $light-gray;
+      border-radius: 3px 0 0 3px;
+      padding: 14px;
+      border: 1px solid $mid-gray;
+      font-family: $text-font-stack;
+
+      @include on-event(){
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 14px;
+      border-radius: 0 3px 3px 0;
+      color: $white;
+      font-family: $text-font-stack;
+      border: 1px solid $pink;
+      background-color: $pink;
+      cursor: pointer;
+
+      @include on-event(){
+        outline: none;
+      }
+    }
+  }
+}
+
+
+div.homepage-content {
+  .images-list {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      height: 200px;
+      padding: 10px;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  .navigation-div {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &.shown {
+      display: flex;
+    }
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+.spinner {
+  margin-top: 200px;
+  display: none;
+
+  .sk-fading-circle {
+    height: 80px;
+    width: 80px;
+  }
+  .sk-fading-circle .sk-circle:before {
+    background-color: $brand-color;
+  }
+}

@@ -1,0 +1,92 @@
+/**
+ * Created by Benzo
+ * https://benzo.io
+ * User: oreuveni
+ * Date: 30/12/2017
+ * Time: 9:26
+ **/
+aside.sidebar {
+  position: fixed;
+  padding: 15px;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background: $light-gray;
+  height: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transform: translateX(310px);
+  -webkit-transition: transform 0.25s ease-in-out;
+  -moz-transition: transform 0.25s ease-in-out;
+  -ms-transition: transform 0.25s ease-in-out;
+  -o-transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  button.close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+  }
+
+  .sidebar-content {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .history-list-headers {
+    margin-top: 40px;
+    margin-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: $grayish;
+  }
+
+  .history-list {
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 40px;
+      padding-left: 5px;
+      padding-right: 5px;
+      cursor: pointer;
+      border-bottom: 1px solid $mid-gray;
+
+      &:hover {
+        background-color: lighten($mid-gray, 10%);
+      }
+
+      .time-span {
+        width: 30px;
+        font-size: 10px;
+        height: 13px;
+        color: $grayish;
+      }
+
+      .query-div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          &:first-child {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

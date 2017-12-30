@@ -1,0 +1,38 @@
+/**
+ * Created by Benzo
+ * https://benzo.io
+ * User: oreuveni
+ * Date: 28/12/2017
+ * Time: 20:45
+ **/
+
+$text-font-stack: 'Karla', 'Varela Round', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+$black: #000 !default;
+$white: #fff !default;
+$light-gray: #F7F7F7 !default;
+$mid-gray: #ccc !default;
+$gray: #444 !default;
+$grayish: lighten($gray, 10%);
+$blue: #0054DA !default;
+$pink: #FF0076 !default;
+
+$brand-color: $pink !default;
+$text-color: #000000 !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+$breakpoints: (
+        'x-small': (min-width: 480px),
+        'small': (min-width: 768px),
+        'medium': (min-width: 992px),
+        'large': (min-width: 1200px),
+        'x-large': (min-width: 1400px),
+        'xx-large': (min-width: 1600px),
+) !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;

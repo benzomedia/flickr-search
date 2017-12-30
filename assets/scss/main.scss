@@ -1,0 +1,24 @@
+/**
+ * Created by Benzo
+ * https://benzo.io
+ * User: oreuveni
+ * Date: 28/12/2017
+ * Time: 20:27
+ **/
+//Vendor
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:400,700');
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+@import "~spinkit/scss/spinners/10-fading-circle";
+@import "~normalize.css";
+
+//Common
+@import "common/variables",
+"common/mixins",
+"common/general";
+
+//Parts
+@import "parts/header",
+"parts/sidebar";
+
+//Pages
+@import "pages/homepage";
