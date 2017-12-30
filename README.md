@@ -14,7 +14,7 @@ Please clone the repo to a selected directory in your computer:
 ``git clone git@github.com:benzomedia/flickr-search.git [your-directory]``
 Go to your directory and run the build command
 ``cd [your-directory] && npm run build``
-The app should compile all the code it needs in order to run
+The app should compile all the code it needs in order to run.
 Go to the ``public`` directory in the project and open ``index.html``
 in any browser.
 
