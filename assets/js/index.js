@@ -12,5 +12,4 @@ import '../scss/main.scss'
 //Import scripts
 import './photos'
 import './sidebar'
-import './header'
 

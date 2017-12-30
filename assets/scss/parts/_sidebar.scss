@@ -32,6 +32,21 @@ aside.sidebar {
     font-size: 40px;
   }
 
+  .clear-history {
+    text-align: right;
+
+    button {
+      background-color: $brand-color;
+      color: $white;
+      border: 1px solid $brand-color;
+      border-radius: 15px;
+      padding: 4px 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+
+
   .sidebar-content {
     h2 {
       text-align: center;
@@ -39,7 +54,7 @@ aside.sidebar {
   }
 
   .history-list-headers {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 5px;
     padding-left: 7px;
     padding-right: 7px;

@@ -8,18 +8,18 @@
 import $ from 'jquery'
 
 $(document).ready(() => {
-    //Open Sidebar
+    //Open sidebar
     $('#toggle-sidebar').on('click', () => {
         $('#sidebar').addClass('open')
     })
 
-    //Close Sidebar
+    //Close sidebar
     $('#sidebar .close').on('click', () => {
         $('#sidebar').removeClass('open')
     })
 
 
-    //Click on History Item
+    //Click on history Item
     $('.history-list').on('click', 'li', function () {
         var query = $(this).attr('data-query')
         $('#search-form input').val(query)
@@ -27,6 +27,11 @@ $(document).ready(() => {
         $('#sidebar').removeClass('open')
     })
 
+    //Clear history
+    $('#clear-history').on('click', () => {
+        var ul = document.getElementById('history-list')
+        ul.innerHTML = ""
+    })
 
 })
 

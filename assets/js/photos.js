@@ -13,7 +13,7 @@ import {addToHistory} from "./sidebar"
 $(document).ready(() => {
     var page = 0
 
-    //Function fires when form submits
+    //Function fires when user searches a term
     $('#search-form').on('submit', e => {
         e.preventDefault()
         page = 1
@@ -73,7 +73,6 @@ function searchPhotos(page, writeHistory = true) {
     imagesDiv.innerHTML = ""
 
     //Get photos from Flickr
-
     getPhotos(query, page).then(response => {
         var images = response.photos.photo
 
