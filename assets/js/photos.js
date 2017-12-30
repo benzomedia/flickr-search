@@ -34,10 +34,37 @@ $(document).ready(() => {
         searchPhotos(page, false)
     })
 
+    //Clear results
+    $('#clear-results').on('click', e => {
+        e.preventDefault()
+
+        //Clear input value
+        $('#search-form input').val("")
+
+        //Clear current results from page
+        var imagesDiv = document.getElementById('images-div')
+        imagesDiv.innerHTML = ""
+
+        //Show no-results message
+        $('.no-results-div').show()
+
+        //Hide navigation
+        $('.navigation-div').removeClass('shown')
+
+        //Hide clear button
+        $('#clear-results').fadeOut()
+
+    })
+
 })
 
 //Function that searches photos and prints them on the page
 function searchPhotos(page, writeHistory = true) {
+    var query = $('#search-form input').val()
+    if(query === "") return
+
+    //Hide message
+    $('.message-div').hide()
     //Show Spinner
     $('#spinner').show()
 
@@ -46,7 +73,7 @@ function searchPhotos(page, writeHistory = true) {
     imagesDiv.innerHTML = ""
 
     //Get photos from Flickr
-    var query = $('#search-form input').val()
+
     getPhotos(query, page).then(response => {
         var images = response.photos.photo
 
@@ -65,6 +92,9 @@ function searchPhotos(page, writeHistory = true) {
         //Add images to page
         imagesDiv.appendChild(ul)
 
+        //Show clear button
+        $('#clear-results').fadeIn()
+
         //Show navigation div
         $('.navigation-div').addClass('shown')
 
@@ -74,7 +104,9 @@ function searchPhotos(page, writeHistory = true) {
         }
 
     }).catch(error => {
-
+        console.log(error)
+        //Show error message
+        $('.error-div').show()
     })
 }
 
@@ -98,7 +130,7 @@ function imageToSrc(image) {
 //Fetches images from Flickr
 function getPhotos(query, page) {
     return new Promise((resolve, reject) => {
-        let url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${constants.FLICKR_API_KEY}&nojsoncallback=1&text=${query}&format=json&safe_search=1&content_type=1&page=${page}`
+        let url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${constants.FLICKR_API_KEY}&nojsoncallback=1&text=${query}&format=json&safe_search=3&content_type=1&page=${page}`
         axios.get(url).then(response => {
             resolve(response.data)
         }).catch(error => {

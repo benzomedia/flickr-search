@@ -21,10 +21,12 @@
 <div class="homepage-content">
     <div class="form-div">
         <div class="container">
+            <button id="clear-results" class="clear" title="Clear"><i class="icon ion-ios-close-outline"></i></button>
             <form id="search-form" class="search-form">
                 <input type="text">
-                <button>Search</button>
+                <button class="submit" type="submit">Search</button>
             </form>
+
         </div>
     </div>
     <div id="images-div"></div>
@@ -60,6 +62,14 @@
         <div class="sk-circle11 sk-circle"></div>
         <div class="sk-circle12 sk-circle"></div>
     </div>
+</div>
+<div class="message-div no-results-div">
+    <h1 class="title">Go on, start exploring!</h1>
+    <img src="images/astronaut.svg" alt="no-results" class="image">
+</div>
+<div class="message-div error-div">
+    <h1 class="title">Oops, you ventured too far!</h1>
+    <img src="images/yacht.svg" alt="no-results" class="image">
 </div>
 <script src="bundle.js"></script>
 </body>
