@@ -11,12 +11,22 @@ and Node-Sass installed globally.
 
 ### Installing the app
 Please clone the repo to a selected directory in your computer:
-``git clone git@github.com:benzomedia/flickr-search.git [your-directory]``
+```
+git clone git@github.com:benzomedia/flickr-search.git [your-directory]
+```
 Go to your directory and install the dependencies
-``cd [your-directory] && npm install``
-Then run the build command to compile ``npm run build``
+```
+cd [your-directory] && npm install
+```
+Then run the build command to compile 
+```
+npm run build
+```
 The app should compile all the code it needs in order to run.
-Open the app by launching public/index.html ``open public/index.html``
+Open the app by launching public/index.html 
+```
+open public/index.html
+```
 
 
 
